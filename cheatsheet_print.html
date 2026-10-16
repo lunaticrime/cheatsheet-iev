@@ -27,9 +27,11 @@
       background: #FFFFFF;
     }
 
-    code, pre, .mono {
+    code, pre, .mono, .cmd-text {
       font-family: 'JetBrains Mono', Menlo, Consolas, monospace;
       font-size: 7.1pt;
+      font-variant-ligatures: none;
+      font-feature-settings: "liga" 0, "calt" 0;
     }
 
     .page {
@@ -316,18 +318,18 @@
         <div class="banner-top">
           <div>
             <div>
-              <span class="badge-orange">CHEATSHEET DE RÉVISION COMPLÈTE</span>
-              <span class="mono" style="font-size:6.6pt; color:#A1A1AA; margin-left:6px;">IEV - ISIA (2026–2027) • Polytech Lille</span>
+              <span class="badge-orange">CHEATSHEET DE RÉVISION</span>
+              <span class="mono" style="font-size:6.6pt; color:#A1A1AA; margin-left:6px;">IEV - ISIA • Polytech Lille</span>
             </div>
             <div class="banner-title">Plongée dans les environnements virtuels Python</div>
-            <div class="banner-sub">Support de référence : Juliette Achddou &amp; Bastien Cazaux • Couvre l'intégralité du cours (59 slides &amp; 13 activités TP)</div>
+            <div class="banner-sub">Cours : Juliette Achddou &amp; Bastien Cazaux • Shell CLI, PATH, pip, SemVer, venv, virtualenv, pyproject.toml, Poetry, uv, Conda, Docker &amp; VMs</div>
           </div>
           <div class="qr-box">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAAAklEQVR4AewaftIAAAUoSURBVO3B0WkkSBBEwadmXEgo/60rSCN0+myahVYNM9LukREfn1+I+KZFxMAiYmARMbCIGHjwB1Lxm+zmRipewW5upOId7OZGKn6T3ewWEQOLiIFFxMAiYuDBN9nNO0jFK9jNjVQ8w25upGJnN+9iN+8gFTeLiIFFxMAiYuDBk6TiGXYzJRUnu9lJxcludnZzIxUnu9lJxcludlJxspudVJzsZkoqnmE3U4uIgUXEwCJiYBEx8OAfJRXvYDfPkIqd3fwfLSIGFhEDi4iBB/8ou3kFqZiym2dIxb9uETGwiBhYRAwsIgYePMlu/jVS8QpScWM3J7vZScUr2M1PWUQMLCIGFhEDD75JKv5mUnGymxu72UnFyW52UnGym51UnOzmFaTitywiBhYRA4uIgUXEwIM/sJu/nVTs7ObGbk5SsbObk1Ts7Oan2M3fZBExsIgYWEQMPPgDqTjZzU4q3sVudnZzIxUnu9lJxcludlLxDKnY2c2N3dxIxbvYzdQiYmARMbCIGFhEDHx8fuEJUnGym51U3NjNu0jFzm6eIRU3drOTit9kN1NScbKb3SJiYBExsIgYePAHUnGym3eQipPd7KTiZDc/xW6m7OZGKm7s5iQV72A3N4uIgUXEwCJiYBEx8OCbpGJnNyepmLKbG7u5kYqT3eyk4mQ3O6k42c1OKk528wp2s5OKG7s5ScXObk5SsbObm0XEwCJiYBEx8PH5hReRip3dnKRiym5OUrGzmxupONnNK0jFzm5+k1Tc2M3UImJgETGwiBhYRAx8fH7hIBUnu9lJxTPsZkoqbuzmJBXvYDfPkIpXsJudVJzsZkoqTnazW0QMLCIGFhEDH59feBOpeIbd/BSpmLKbk1Tc2M2NVNzYzY1U3NjN1CJiYBExsIgYWEQMPPgDqbixm5NUTNnNSSp2dnOSip3dnKRiZzc3dnOSihu72UnFK9jNSSpu7OZGKnZ2c7OIGFhEDCwiBj4+v/ANUvEKdrOTipPdvIJU3NjNTipewW5OUrGzm2dIxc5uTlJxYzdTi4iBRcTAImJgETHw8fmFg1Sc7OYVpGJnNzdS8Qy7eQepONnNTip+k93spOJkNzupONnNbhExsIgYWEQMPPhlUnFjNyep2NnNu0jFzm5OUnFjNzupONnNjVS8g93cLCIGFhEDi4iBRcTAgx9mNzdSsZOKZ0jFjd3spOIZdnMjFTu7+Sl2c5KKnd3cLCIGFhEDi4iBj88vHKTiZDc7qXgXu/mbSMWU3dxIxbvYzU4qnmE3u0XEwCJiYBExsIgY+Pj8wl9OKk52s5OKk93spOIZdrOTipPd7KTiGXYzJRXvYje7RcTAImJgETHw4A+k4jfZzc5uTlJxIxU7uzlJxY1UTNnNSSqmpOJkN69gN1OLiIFFxMAiYmARMfDgm+zmHaTiRipOdvMOdnOSip3d/BS7eYbdvMMiYmARMbCIGHjwJKl4ht28glTs7OYkFTd2s5OKZ0jFzm5OdrOTipNUvINU3NjNzSJiYBExsIgYWEQMPPhH2c1OKk52M2U3N1JxIxUnu9nZzbtIxZRUnOxmt4gYWEQMLCIGHvxP2M0zpGJnNyep2NnNM6RiZzcnqfgtdnOziBhYRAwsIgYWEQMPnmQ3P8VuniEVr2A3O6k42c1OKm6k4sZuTlIxZTcnqZhaRAwsIgYWEQMfn184SMVvspudVJzs5hWk4sZubqRiym5+ilSc7GZqETGwiBhYRAwsIgY+Pr8Q8U2LiIFFxMAiYuA/lLMzziq7FmMAAAAASUVORK5CYII=" alt="QR Code" />
+            <img src="data:image/png;base64,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" alt="QR Code" />
             <div>
               <div class="qr-label">▶ Site Web &amp; Simulateur CLI</div>
-              <div class="qr-desc">Pratiquez les commandes &amp; les 13 Mini-TPs dans le terminal simulé :</div>
-              <div class="qr-url">[URL À REMPLACER : https://iev-cheatsheet.vercel.app]</div>
+              <div class="qr-desc">Pratiquez toutes les commandes dans le terminal interactif :</div>
+              <div class="qr-url">https://lunaticrime.github.io/cheatsheet-iev/</div>
             </div>
           </div>
         </div>
@@ -342,12 +344,12 @@
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 1 — Rappels sur les Shells CLI, Système de fichiers, Variables &amp; PATH</div>
-          <span class="meta">Slides 6 à 18 (Pages 9–26)</span>
+          <span class="meta">Bash / Zsh • Racine /</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout">
-              <strong>Shell vs Terminal vs Console (Slide 7) :</strong> Le <strong>shell</strong> (<code>bash</code>, <code>zsh</code>) est le programme qui traite les commandes et renvoie un résultat (interface de l'OS). Le <strong>terminal</strong> est le programme d'interface qui exécute un shell. La <strong>console</strong> est un type particulier de terminal.
+              <strong>Shell vs Terminal vs Console :</strong> Le <strong>shell</strong> (<code>bash</code>, <code>zsh</code>) est le programme qui traite les commandes et renvoie un résultat (interface de l'OS). Le <strong>terminal</strong> est le programme d'interface qui exécute un shell. La <strong>console</strong> est un type particulier de terminal.
             </div>
             <table>
               <thead>
@@ -400,7 +402,7 @@
                     ps -f --forest
                   </td>
                   <td>
-                    <strong>Inception of Bash (Slides 16–17) :</strong> <code>bash</code> ouvre un sous-shell ; <code>exit</code> le ferme. <code>$SHLVL</code> donne la profondeur d'imbrication ; <code>ps -f --forest</code> affiche l'arbre d'imbrication des shells.
+                    <strong>Inception of Bash :</strong> <code>bash</code> ouvre un sous-shell ; <code>exit</code> le ferme. <code>$SHLVL</code> donne la profondeur d'imbrication ; <code>ps -f --forest</code> affiche l'arbre d'imbrication des shells.
                   </td>
                 </tr>
               </tbody>
@@ -409,7 +411,7 @@
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:4px;">
             <div class="callout" style="margin-bottom:0;">
-              <div style="font-weight:700; margin-bottom:2px;">Portée temporelle d'une modification du <code>PATH</code> (Slide 14 — TP <code>sl</code>) :</div>
+              <div style="font-weight:700; margin-bottom:2px;">Portée temporelle d'une modification du <code>PATH</code> :</div>
               <table>
                 <thead>
                   <tr>
@@ -443,7 +445,7 @@
             </div>
 
             <div class="dark-code">
-              <div style="color:#F97316; font-weight:700; margin-bottom:1px;"># Pourquoi bash --norc conserve le prompt PS1 ? (Slide 17)</div>
+              <div style="color:#F97316; font-weight:700; margin-bottom:1px;"># Pourquoi bash --norc conserve le prompt PS1 ?</div>
               <div>pseudo$ export PS1="[A] &gt; "</div>
               <div>[14:32] &gt; bash &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#A1A1AA;"># Lit ~/.bashrc -&gt; réinitialise PS1 (pseudo$)</span></div>
               <div>pseudo$ exit</div>
@@ -463,12 +465,12 @@
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 2 — Packages Python, PyPI, pip, Graphe des dépendances, SemVer &amp; Conflits</div>
-          <span class="meta">Slides 18 à 29 (Pages 27–47)</span>
+          <span class="meta">PyPI • sdist vs wheel • Tri topologique</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout">
-              <strong>PyPI (Python Package Index — Slide 22) :</strong> Plateforme en ligne hébergeant les bibliothèques Python :<br/>
+              <strong>PyPI (Python Package Index) :</strong> Plateforme en ligne hébergeant les bibliothèques Python :<br/>
               • <strong>Paquets <code>sdist</code> (<code>*.tar.gz</code>) :</strong> code source compressé nécessitant une compilation locale.<br/>
               • <strong>Paquets <code>wheel</code> (<code>*.whl</code>) :</strong> fichier binaire prêt à l'emploi (installation rapide sans compilation).
             </div>
@@ -483,7 +485,7 @@
               <tbody>
                 <tr>
                   <td class="cmd-text">pip install black<br/>python3 -m pip install black</td>
-                  <td>Installe un paquet et ses dépendances. <em>Note :</em> Sur le système de l'école (Slide 21), vous n'avez pas les droits admin pour installer globalement avec <code>pip</code> !</td>
+                  <td>Installe un paquet et ses dépendances. <em>Note :</em> Sur le système de l'école, vous n'avez pas les droits admin pour installer globalement avec <code>pip</code> !</td>
                 </tr>
                 <tr>
                   <td class="cmd-text">pip --version &nbsp;|&nbsp; pip help</td>
@@ -500,23 +502,23 @@
             </table>
 
             <div class="callout" style="margin-top:4px; margin-bottom:0;">
-              <strong>Graphe des dépendances (DAG sans cycle) &amp; Tri topologique (Slides 23–24) :</strong><br/>
+              <strong>Graphe des dépendances (DAG sans cycle) &amp; Tri topologique :</strong><br/>
               Un package A dépend de B si A a besoin de B. Ce graphe <strong>ne peut pas contenir de cycle</strong>. Pour trouver l'ordre d'installation, <code>pip</code> réalise un <strong>tri topologique</strong> :<br/>
               <span class="cmd-text">pkg_e ──► pkg_f ──► pkg_b ──► pkg_a ──► pkg_c ──► pkg_d ──► myapp</span><br/>
-              <strong>Conflit en diamant &amp; Enfer des dépendances (Slides 27–28) :</strong> Dans le TP 6, <code>myappconf</code> dépend de <code>pkg_a</code> (qui exige <code>pkg_c &lt; 2</code>) ET de <code>pkg_b</code> (qui exige <code>pkg_c &gt;= 2</code>) ──► installation impossible !
+              <strong>Conflit en diamant &amp; Enfer des dépendances :</strong> <code>myappconf</code> dépend de <code>pkg_a</code> (qui exige <code>pkg_c &lt; 2</code>) ET de <code>pkg_b</code> (qui exige <code>pkg_c &gt;= 2</code>) ──► installation impossible !
             </div>
           </div>
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:4px;">
             <div class="dark-code">
-              <div style="color:#F97316; font-weight:700;">Semantic Versioning (SemVer — Slide 25) : MAJEUR.MINEUR.CORRECTIF</div>
+              <div style="color:#F97316; font-weight:700;">Semantic Versioning (SemVer) : MAJEUR.MINEUR.CORRECTIF</div>
               <div>• <span style="color:#34D399;font-weight:700;">CORRECTIF (1.10.7 ──► 1.10.8)</span> : Corrections d'anomalies rétrocompatibles</div>
               <div>• <span style="color:#FBBF24;font-weight:700;">MINEUR &nbsp;&nbsp;&nbsp;(1.10.8 ──► 1.11.0)</span> : Ajouts de fonctionnalités rétrocompatibles</div>
               <div>• <span style="color:#FB7185;font-weight:700;">MAJEUR &nbsp;&nbsp;&nbsp;(1.11.0 ──► 2.0.0)</span> &nbsp;: Changements NON rétrocompatibles</div>
             </div>
 
             <div class="callout" style="margin-bottom:0;">
-              <div style="font-weight:700; margin-bottom:2px;">Délimitation des versions des dépendances (Slide 26) :</div>
+              <div style="font-weight:700; margin-bottom:2px;">Délimitation des versions des dépendances :</div>
               <table class="mono" style="font-size:6.3pt;">
                 <thead>
                   <tr>
@@ -560,18 +562,18 @@
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 3 — Environnements Virtuels Classiques : venv, requirements.txt &amp; virtualenv</div>
-          <span class="meta">Slides 30 à 39 (Pages 48–78) • Analogie : « La Lunch Box »</span>
+          <span class="meta">Isolation par projet • Analogie : « La Lunch Box »</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout">
-              <strong>Définition (Slide 30) :</strong> Distribution Python <strong>isolée et autonome</strong> contenant une copie de Python + un dossier <code>site-packages</code> dédié. Permet d'installer des paquets avec <code>pip</code> sur les sessions de l'école et d'éviter les conflits entre projets (<code>env1</code> avec <code>numpy 1.0.0</code>, <code>env2</code> avec <code>numpy 2.3.3</code>).
+              <strong>Définition :</strong> Distribution Python <strong>isolée et autonome</strong> contenant une copie de Python + un dossier <code>site-packages</code> dédié. Permet d'installer des paquets avec <code>pip</code> sur les sessions de l'école et d'éviter les conflits entre projets (<code>env1</code> avec <code>numpy 1.0.0</code>, <code>env2</code> avec <code>numpy 2.3.3</code>).
             </div>
             <table>
               <thead>
                 <tr>
                   <th style="width:42%;">Commande</th>
-                  <th>Rôle &amp; Pratique (TP 7 à 10)</th>
+                  <th>Rôle &amp; Pratique</th>
                 </tr>
               </thead>
               <tbody>
@@ -601,7 +603,7 @@
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:4px;">
             <div class="callout" style="margin-bottom:0;">
-              <strong style="display:block; margin-bottom:2px;">Les 11 propriétés d'une « bonne Lunch Box » (Slide 31) :</strong>
+              <strong style="display:block; margin-bottom:2px;">Les 11 propriétés d'une « bonne Lunch Box » :</strong>
               <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5px 6px; font-size:6.8pt;">
                 <div>1. <strong>Isolation</strong> des dépendances</div>
                 <div>2. <strong>Bonne pratique</strong> pro</div>
@@ -618,7 +620,7 @@
             </div>
 
             <div class="callout" style="margin-bottom:0; font-size:6.9pt;">
-              <strong>Écosystème <code>virtualenv</code> (Slide 36) :</strong><br/>
+              <strong>Écosystème <code>virtualenv</code> :</strong><br/>
               • <strong>Extensible :</strong> dépôt PyPI privé, préinstallation automatique (<code>pytest</code>, <code>black</code>).<br/>
               • <strong><code>virtualenvwrapper</code> :</strong> centralise les environnements (<code>mkvirtualenv</code>, <code>workon</code>).<br/>
               • <strong><code>tox</code> :</strong> crée plusieurs environnements et lance automatiquement les tests.
@@ -631,23 +633,23 @@
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 4 — Gestion Moderne : pyproject.toml, lock, Poetry (= Cheffe de cuisine) &amp; uv</div>
-          <span class="meta">Slides 40 à 51 (Pages 79–111)</span>
+          <span class="meta">TOML • Résolution SAT • uv (Rust)</span>
         </div>
         <div class="section-body" style="display:flex; flex-direction:column; gap:4px;">
           <div class="grid-3">
             <div class="callout-rose">
-              <strong>Pourquoi <code>requirements.txt</code> ne suffit pas ? (Slide 42)</strong><br/>
+              <strong>Pourquoi <code>requirements.txt</code> ne suffit pas ?</strong><br/>
               1. Pour <code>matplotlib</code> sans version, laquelle mon collègue a-t-il utilisée ?<br/>
               2. Faut-il figer <code>numpy==1.26.4</code> si d'autres versions sortent ?<br/>
               3. Quelle version de <strong>Python</strong> est utilisée ?<br/>
               4. Quelle est la version / auteur du projet ?
             </div>
             <div class="callout-green">
-              <strong>1. <code>pyproject.toml</code> = LE SOUHAIT (Slides 43–46)</strong><br/>
+              <strong>1. <code>pyproject.toml</code> = LE SOUHAIT</strong><br/>
               Format <strong>TOML</strong> (<em>Tom's Obvious, Minimal Language</em>). Décrit nos envies et contraintes : <code>[build-system]</code>, <code>[project]</code> (<code>name</code>, <code>version</code>, <code>authors</code>, <code>requires-python = "&gt;=3.9"</code>, <code>dependencies</code>), <code>[project.optional-dependencies]</code> (<code>dev</code>, <code>docs</code>), <code>[tool.*]</code>.
             </div>
             <div class="callout-blue">
-              <strong>2. <code>poetry.lock</code> = LA RÉALITÉ FIGÉE (Slide 46)</strong><br/>
+              <strong>2. <code>poetry.lock</code> = LA RÉALITÉ FIGÉE</strong><br/>
               Résout et fige une version précise et compatible de tous les paquets. Garantit la reproductibilité (CI, déploiement) : <em>la photo exacte de ce qui marche</em>.<br/>
               <strong>3. Env. Virtuel = L'EXÉCUTION</strong> concrète du lock.
             </div>
@@ -657,7 +659,7 @@
             <table>
               <thead>
                 <tr>
-                  <th style="width:25%;">Étape (Slide 47)</th>
+                  <th style="width:25%;">Étape du cycle</th>
                   <th style="width:40%;">Commandes Poetry</th>
                   <th>Effet dans le flux Poetry</th>
                 </tr>
@@ -692,7 +694,7 @@
             </table>
 
             <div class="callout" style="margin-bottom:0;">
-              <strong style="display:block; margin-bottom:2px;">Les concurrents de Poetry &amp; la révolution <code>uv</code> (Slide 50) :</strong>
+              <strong style="display:block; margin-bottom:2px;">Les concurrents de Poetry &amp; la révolution <code>uv</code> :</strong>
               <table style="font-size:6.3pt;">
                 <thead>
                   <tr>
@@ -726,18 +728,18 @@
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 5 — Au-delà de Python : Conda (= Cheffe à domicile), Containers, VMs &amp; Isolation</div>
-          <span class="meta">Slides 52 à 58 (Pages 112–125)</span>
+          <span class="meta">Binaires système • Docker vs VM • Pyramide</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout-warn" style="margin-bottom:3px;">
-              <strong>5 Limites des venvs classiques &amp; Poetry (Slide 52) :</strong> 1. Pas de gestion des <strong>dépendances système</strong> (ex: <code>libgdal</code>, <code>proj</code>) • 2. Poetry reste centré sur Python • 3. Erreurs de compilation (compilateur/entêtes C absents lors du <code>pip install</code>) • 4. Pas de contrôle natif sur l'installation de Python • 5. Portabilité inter-machines limitée.
+              <strong>5 Limites des venvs classiques &amp; Poetry :</strong> 1. Pas de gestion des <strong>dépendances système</strong> (ex: <code>libgdal</code>, <code>proj</code>) • 2. Poetry reste centré sur Python • 3. Erreurs de compilation (compilateur/entêtes C absents lors du <code>pip install</code>) • 4. Pas de contrôle natif sur l'installation de Python • 5. Portabilité inter-machines limitée.
             </div>
 
             <table>
               <thead>
                 <tr>
-                  <th style="width:45%;">Commandes Conda (Slides 53–55)</th>
+                  <th style="width:45%;">Commandes Conda</th>
                   <th>Fonctionnement &amp; Rôle</th>
                 </tr>
               </thead>
@@ -768,7 +770,7 @@
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3px;">
             <div class="callout" style="margin-bottom:0;">
-              <strong style="display:block; margin-bottom:2px;">Pyramide de l'isolation &amp; Poids mesuré (Python 3.9 + matplotlib — Slide 58) :</strong>
+              <strong style="display:block; margin-bottom:2px;">Pyramide de l'isolation &amp; Poids mesuré (Python 3.9 + matplotlib) :</strong>
               <table style="font-size:6.5pt;">
                 <thead>
                   <tr>
@@ -808,7 +810,7 @@
             </div>
 
             <div class="dark-code" style="font-size:6.4pt;">
-              <span style="color:#F97316;font-weight:700;">Containers vs VMs (Slide 57) :</span><br/>
+              <span style="color:#F97316;font-weight:700;">Containers vs VMs :</span><br/>
               • <strong>Containers :</strong> Infra ──► Host OS ──► <strong>Container Engine</strong> ──► [Bin/Lib + App] (Noyau partagé)<br/>
               • <strong>VMs :</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Infra ──► <strong>Hypervisor</strong> ──► [<strong>Guest OS complet</strong> + Bin/Lib + App]
             </div>

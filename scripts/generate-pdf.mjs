@@ -42,9 +42,11 @@ async function generate() {
       background: #FFFFFF;
     }
 
-    code, pre, .mono {
+    code, pre, .mono, .cmd-text {
       font-family: 'JetBrains Mono', Menlo, Consolas, monospace;
       font-size: 7.1pt;
+      font-variant-ligatures: none;
+      font-feature-settings: "liga" 0, "calt" 0;
     }
 
     .page {
@@ -357,12 +359,12 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 1 — Rappels sur les Shells CLI, Système de fichiers, Variables &amp; PATH</div>
-          <span class="meta">Slides 6 à 18 (Pages 9–26)</span>
+          <span class="meta">Bash / Zsh • Racine /</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout">
-              <strong>Shell vs Terminal vs Console (Slide 7) :</strong> Le <strong>shell</strong> (<code>bash</code>, <code>zsh</code>) est le programme qui traite les commandes et renvoie un résultat (interface de l'OS). Le <strong>terminal</strong> est le programme d'interface qui exécute un shell. La <strong>console</strong> est un type particulier de terminal.
+              <strong>Shell vs Terminal vs Console :</strong> Le <strong>shell</strong> (<code>bash</code>, <code>zsh</code>) est le programme qui traite les commandes et renvoie un résultat (interface de l'OS). Le <strong>terminal</strong> est le programme d'interface qui exécute un shell. La <strong>console</strong> est un type particulier de terminal.
             </div>
             <table>
               <thead>
@@ -415,7 +417,7 @@ async function generate() {
                     ps -f --forest
                   </td>
                   <td>
-                    <strong>Inception of Bash (Slides 16–17) :</strong> <code>bash</code> ouvre un sous-shell ; <code>exit</code> le ferme. <code>$SHLVL</code> donne la profondeur d'imbrication ; <code>ps -f --forest</code> affiche l'arbre d'imbrication des shells.
+                    <strong>Inception of Bash :</strong> <code>bash</code> ouvre un sous-shell ; <code>exit</code> le ferme. <code>$SHLVL</code> donne la profondeur d'imbrication ; <code>ps -f --forest</code> affiche l'arbre d'imbrication des shells.
                   </td>
                 </tr>
               </tbody>
@@ -424,7 +426,7 @@ async function generate() {
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:4px;">
             <div class="callout" style="margin-bottom:0;">
-              <div style="font-weight:700; margin-bottom:2px;">Portée temporelle d'une modification du <code>PATH</code> (Slide 14 — TP <code>sl</code>) :</div>
+              <div style="font-weight:700; margin-bottom:2px;">Portée temporelle d'une modification du <code>PATH</code> :</div>
               <table>
                 <thead>
                   <tr>
@@ -458,7 +460,7 @@ async function generate() {
             </div>
 
             <div class="dark-code">
-              <div style="color:#F97316; font-weight:700; margin-bottom:1px;"># Pourquoi bash --norc conserve le prompt PS1 ? (Slide 17)</div>
+              <div style="color:#F97316; font-weight:700; margin-bottom:1px;"># Pourquoi bash --norc conserve le prompt PS1 ?</div>
               <div>pseudo$ export PS1="[\A] &gt; "</div>
               <div>[14:32] &gt; bash &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#A1A1AA;"># Lit ~/.bashrc -&gt; réinitialise PS1 (pseudo$)</span></div>
               <div>pseudo$ exit</div>
@@ -478,12 +480,12 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 2 — Packages Python, PyPI, pip, Graphe des dépendances, SemVer &amp; Conflits</div>
-          <span class="meta">Slides 18 à 29 (Pages 27–47)</span>
+          <span class="meta">PyPI • sdist vs wheel • Tri topologique</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout">
-              <strong>PyPI (Python Package Index — Slide 22) :</strong> Plateforme en ligne hébergeant les bibliothèques Python :<br/>
+              <strong>PyPI (Python Package Index) :</strong> Plateforme en ligne hébergeant les bibliothèques Python :<br/>
               • <strong>Paquets <code>sdist</code> (<code>*.tar.gz</code>) :</strong> code source compressé nécessitant une compilation locale.<br/>
               • <strong>Paquets <code>wheel</code> (<code>*.whl</code>) :</strong> fichier binaire prêt à l'emploi (installation rapide sans compilation).
             </div>
@@ -498,7 +500,7 @@ async function generate() {
               <tbody>
                 <tr>
                   <td class="cmd-text">pip install black<br/>python3 -m pip install black</td>
-                  <td>Installe un paquet et ses dépendances. <em>Note :</em> Sur le système de l'école (Slide 21), vous n'avez pas les droits admin pour installer globalement avec <code>pip</code> !</td>
+                  <td>Installe un paquet et ses dépendances. <em>Note :</em> Sur le système de l'école, vous n'avez pas les droits admin pour installer globalement avec <code>pip</code> !</td>
                 </tr>
                 <tr>
                   <td class="cmd-text">pip --version &nbsp;|&nbsp; pip help</td>
@@ -515,23 +517,23 @@ async function generate() {
             </table>
 
             <div class="callout" style="margin-top:4px; margin-bottom:0;">
-              <strong>Graphe des dépendances (DAG sans cycle) &amp; Tri topologique (Slides 23–24) :</strong><br/>
+              <strong>Graphe des dépendances (DAG sans cycle) &amp; Tri topologique :</strong><br/>
               Un package A dépend de B si A a besoin de B. Ce graphe <strong>ne peut pas contenir de cycle</strong>. Pour trouver l'ordre d'installation, <code>pip</code> réalise un <strong>tri topologique</strong> :<br/>
               <span class="cmd-text">pkg_e ──► pkg_f ──► pkg_b ──► pkg_a ──► pkg_c ──► pkg_d ──► myapp</span><br/>
-              <strong>Conflit en diamant &amp; Enfer des dépendances (Slides 27–28) :</strong> Dans le TP 6, <code>myappconf</code> dépend de <code>pkg_a</code> (qui exige <code>pkg_c &lt; 2</code>) ET de <code>pkg_b</code> (qui exige <code>pkg_c &gt;= 2</code>) ──► installation impossible !
+              <strong>Conflit en diamant &amp; Enfer des dépendances :</strong> <code>myappconf</code> dépend de <code>pkg_a</code> (qui exige <code>pkg_c &lt; 2</code>) ET de <code>pkg_b</code> (qui exige <code>pkg_c &gt;= 2</code>) ──► installation impossible !
             </div>
           </div>
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:4px;">
             <div class="dark-code">
-              <div style="color:#F97316; font-weight:700;">Semantic Versioning (SemVer — Slide 25) : MAJEUR.MINEUR.CORRECTIF</div>
+              <div style="color:#F97316; font-weight:700;">Semantic Versioning (SemVer) : MAJEUR.MINEUR.CORRECTIF</div>
               <div>• <span style="color:#34D399;font-weight:700;">CORRECTIF (1.10.7 ──► 1.10.8)</span> : Corrections d'anomalies rétrocompatibles</div>
               <div>• <span style="color:#FBBF24;font-weight:700;">MINEUR &nbsp;&nbsp;&nbsp;(1.10.8 ──► 1.11.0)</span> : Ajouts de fonctionnalités rétrocompatibles</div>
               <div>• <span style="color:#FB7185;font-weight:700;">MAJEUR &nbsp;&nbsp;&nbsp;(1.11.0 ──► 2.0.0)</span> &nbsp;: Changements NON rétrocompatibles</div>
             </div>
 
             <div class="callout" style="margin-bottom:0;">
-              <div style="font-weight:700; margin-bottom:2px;">Délimitation des versions des dépendances (Slide 26) :</div>
+              <div style="font-weight:700; margin-bottom:2px;">Délimitation des versions des dépendances :</div>
               <table class="mono" style="font-size:6.3pt;">
                 <thead>
                   <tr>
@@ -575,18 +577,18 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 3 — Environnements Virtuels Classiques : venv, requirements.txt &amp; virtualenv</div>
-          <span class="meta">Slides 30 à 39 (Pages 48–78) • Analogie : « La Lunch Box »</span>
+          <span class="meta">Isolation par projet • Analogie : « La Lunch Box »</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout">
-              <strong>Définition (Slide 30) :</strong> Distribution Python <strong>isolée et autonome</strong> contenant une copie de Python + un dossier <code>site-packages</code> dédié. Permet d'installer des paquets avec <code>pip</code> sur les sessions de l'école et d'éviter les conflits entre projets (<code>env1</code> avec <code>numpy 1.0.0</code>, <code>env2</code> avec <code>numpy 2.3.3</code>).
+              <strong>Définition :</strong> Distribution Python <strong>isolée et autonome</strong> contenant une copie de Python + un dossier <code>site-packages</code> dédié. Permet d'installer des paquets avec <code>pip</code> sur les sessions de l'école et d'éviter les conflits entre projets (<code>env1</code> avec <code>numpy 1.0.0</code>, <code>env2</code> avec <code>numpy 2.3.3</code>).
             </div>
             <table>
               <thead>
                 <tr>
                   <th style="width:42%;">Commande</th>
-                  <th>Rôle &amp; Pratique (TP 7 à 10)</th>
+                  <th>Rôle &amp; Pratique</th>
                 </tr>
               </thead>
               <tbody>
@@ -616,7 +618,7 @@ async function generate() {
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:4px;">
             <div class="callout" style="margin-bottom:0;">
-              <strong style="display:block; margin-bottom:2px;">Les 11 propriétés d'une « bonne Lunch Box » (Slide 31) :</strong>
+              <strong style="display:block; margin-bottom:2px;">Les 11 propriétés d'une « bonne Lunch Box » :</strong>
               <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5px 6px; font-size:6.8pt;">
                 <div>1. <strong>Isolation</strong> des dépendances</div>
                 <div>2. <strong>Bonne pratique</strong> pro</div>
@@ -633,7 +635,7 @@ async function generate() {
             </div>
 
             <div class="callout" style="margin-bottom:0; font-size:6.9pt;">
-              <strong>Écosystème <code>virtualenv</code> (Slide 36) :</strong><br/>
+              <strong>Écosystème <code>virtualenv</code> :</strong><br/>
               • <strong>Extensible :</strong> dépôt PyPI privé, préinstallation automatique (<code>pytest</code>, <code>black</code>).<br/>
               • <strong><code>virtualenvwrapper</code> :</strong> centralise les environnements (<code>mkvirtualenv</code>, <code>workon</code>).<br/>
               • <strong><code>tox</code> :</strong> crée plusieurs environnements et lance automatiquement les tests.
@@ -646,23 +648,23 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 4 — Gestion Moderne : pyproject.toml, lock, Poetry (= Cheffe de cuisine) &amp; uv</div>
-          <span class="meta">Slides 40 à 51 (Pages 79–111)</span>
+          <span class="meta">TOML • Résolution SAT • uv (Rust)</span>
         </div>
         <div class="section-body" style="display:flex; flex-direction:column; gap:4px;">
           <div class="grid-3">
             <div class="callout-rose">
-              <strong>Pourquoi <code>requirements.txt</code> ne suffit pas ? (Slide 42)</strong><br/>
+              <strong>Pourquoi <code>requirements.txt</code> ne suffit pas ?</strong><br/>
               1. Pour <code>matplotlib</code> sans version, laquelle mon collègue a-t-il utilisée ?<br/>
               2. Faut-il figer <code>numpy==1.26.4</code> si d'autres versions sortent ?<br/>
               3. Quelle version de <strong>Python</strong> est utilisée ?<br/>
               4. Quelle est la version / auteur du projet ?
             </div>
             <div class="callout-green">
-              <strong>1. <code>pyproject.toml</code> = LE SOUHAIT (Slides 43–46)</strong><br/>
+              <strong>1. <code>pyproject.toml</code> = LE SOUHAIT</strong><br/>
               Format <strong>TOML</strong> (<em>Tom's Obvious, Minimal Language</em>). Décrit nos envies et contraintes : <code>[build-system]</code>, <code>[project]</code> (<code>name</code>, <code>version</code>, <code>authors</code>, <code>requires-python = "&gt;=3.9"</code>, <code>dependencies</code>), <code>[project.optional-dependencies]</code> (<code>dev</code>, <code>docs</code>), <code>[tool.*]</code>.
             </div>
             <div class="callout-blue">
-              <strong>2. <code>poetry.lock</code> = LA RÉALITÉ FIGÉE (Slide 46)</strong><br/>
+              <strong>2. <code>poetry.lock</code> = LA RÉALITÉ FIGÉE</strong><br/>
               Résout et fige une version précise et compatible de tous les paquets. Garantit la reproductibilité (CI, déploiement) : <em>la photo exacte de ce qui marche</em>.<br/>
               <strong>3. Env. Virtuel = L'EXÉCUTION</strong> concrète du lock.
             </div>
@@ -672,7 +674,7 @@ async function generate() {
             <table>
               <thead>
                 <tr>
-                  <th style="width:25%;">Étape (Slide 47)</th>
+                  <th style="width:25%;">Étape du cycle</th>
                   <th style="width:40%;">Commandes Poetry</th>
                   <th>Effet dans le flux Poetry</th>
                 </tr>
@@ -707,7 +709,7 @@ async function generate() {
             </table>
 
             <div class="callout" style="margin-bottom:0;">
-              <strong style="display:block; margin-bottom:2px;">Les concurrents de Poetry &amp; la révolution <code>uv</code> (Slide 50) :</strong>
+              <strong style="display:block; margin-bottom:2px;">Les concurrents de Poetry &amp; la révolution <code>uv</code> :</strong>
               <table style="font-size:6.3pt;">
                 <thead>
                   <tr>
@@ -741,18 +743,18 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 5 — Au-delà de Python : Conda (= Cheffe à domicile), Containers, VMs &amp; Isolation</div>
-          <span class="meta">Slides 52 à 58 (Pages 112–125)</span>
+          <span class="meta">Binaires système • Docker vs VM • Pyramide</span>
         </div>
         <div class="section-body grid-2">
           <div>
             <div class="callout-warn" style="margin-bottom:3px;">
-              <strong>5 Limites des venvs classiques &amp; Poetry (Slide 52) :</strong> 1. Pas de gestion des <strong>dépendances système</strong> (ex: <code>libgdal</code>, <code>proj</code>) • 2. Poetry reste centré sur Python • 3. Erreurs de compilation (compilateur/entêtes C absents lors du <code>pip install</code>) • 4. Pas de contrôle natif sur l'installation de Python • 5. Portabilité inter-machines limitée.
+              <strong>5 Limites des venvs classiques &amp; Poetry :</strong> 1. Pas de gestion des <strong>dépendances système</strong> (ex: <code>libgdal</code>, <code>proj</code>) • 2. Poetry reste centré sur Python • 3. Erreurs de compilation (compilateur/entêtes C absents lors du <code>pip install</code>) • 4. Pas de contrôle natif sur l'installation de Python • 5. Portabilité inter-machines limitée.
             </div>
 
             <table>
               <thead>
                 <tr>
-                  <th style="width:45%;">Commandes Conda (Slides 53–55)</th>
+                  <th style="width:45%;">Commandes Conda</th>
                   <th>Fonctionnement &amp; Rôle</th>
                 </tr>
               </thead>
@@ -783,7 +785,7 @@ async function generate() {
 
           <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3px;">
             <div class="callout" style="margin-bottom:0;">
-              <strong style="display:block; margin-bottom:2px;">Pyramide de l'isolation &amp; Poids mesuré (Python 3.9 + matplotlib — Slide 58) :</strong>
+              <strong style="display:block; margin-bottom:2px;">Pyramide de l'isolation &amp; Poids mesuré (Python 3.9 + matplotlib) :</strong>
               <table style="font-size:6.5pt;">
                 <thead>
                   <tr>
@@ -823,7 +825,7 @@ async function generate() {
             </div>
 
             <div class="dark-code" style="font-size:6.4pt;">
-              <span style="color:#F97316;font-weight:700;">Containers vs VMs (Slide 57) :</span><br/>
+              <span style="color:#F97316;font-weight:700;">Containers vs VMs :</span><br/>
               • <strong>Containers :</strong> Infra ──► Host OS ──► <strong>Container Engine</strong> ──► [Bin/Lib + App] (Noyau partagé)<br/>
               • <strong>VMs :</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Infra ──► <strong>Hypervisor</strong> ──► [<strong>Guest OS complet</strong> + Bin/Lib + App]
             </div>
