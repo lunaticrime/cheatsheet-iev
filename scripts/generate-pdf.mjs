@@ -119,7 +119,7 @@ async function generate() {
       align-items: center;
       gap: 6px;
       border: 1px solid #E4E4E7;
-      width: 225px;
+      width: 268px;
       flex-shrink: 0;
     }
 
@@ -147,15 +147,15 @@ async function generate() {
 
     .qr-url {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 6pt;
+      font-size: 5.7pt;
       font-weight: 700;
       background: #FFF7ED;
       border: 1px solid #FDBA74;
       color: #9A3412;
-      padding: 1px 3px;
+      padding: 1px 4px;
       border-radius: 3px;
       margin-top: 2px;
-      word-break: break-all;
+      white-space: nowrap;
     }
 
     .toc-bar {
@@ -166,7 +166,8 @@ async function generate() {
       color: #3F3F46;
       display: flex;
       justify-content: space-between;
-      gap: 6px;
+      align-items: center;
+      gap: 8px;
     }
 
     /* Section Card */
@@ -349,7 +350,7 @@ async function generate() {
           </div>
         </div>
         <div class="toc-bar">
-          <span><strong>Sommaire :</strong></span>
+          <span style="white-space:nowrap;"><strong>Sommaire :</strong></span>
           <span><strong>Page 1 :</strong> Ch.1 Shell CLI, Arborescence, PATH &amp; Inception • Ch.2 Packages, PyPI, pip, Graphe DAG, SemVer &amp; Conflits</span>
           <span><strong>Page 2 :</strong> Ch.3 venv, requirements.txt, virtualenv • Ch.4 pyproject.toml, lock, Poetry &amp; uv • Ch.5 Conda, Containers, VMs &amp; Décision</span>
         </div>
