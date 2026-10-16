@@ -106,9 +106,11 @@ export const PrintableCheatsheet: React.FC = () => {
           {/* Compact Table of Contents Bar */}
           <div className="bg-[#FAF8F5] px-4 py-1.5 border-t border-zinc-200 flex flex-wrap items-center justify-between text-[10px] font-medium text-zinc-700">
             <span><strong>Sommaire :</strong></span>
-            <span><strong>P.1</strong> — 1. Shell CLI, Arborescence, PATH &amp; Inception • 2. Packages, PyPI, pip, Graphe DAG &amp; SemVer</span>
-            <span><strong>P.2</strong> — 3. venv, requirements.txt &amp; virtualenv • 4. pyproject.toml, lock, Poetry &amp; uv</span>
-            <span><strong>P.3</strong> — 5. Conda, Containers vs VMs, Pyramide de l'isolation &amp; Arbre de décision</span>
+            <span><strong>1.</strong> Shell CLI, Arborescence, PATH &amp; Inception</span>
+            <span><strong>2.</strong> Packages, PyPI, pip, Graphe DAG &amp; SemVer</span>
+            <span><strong>3.</strong> venv, requirements.txt &amp; virtualenv</span>
+            <span><strong>4.</strong> pyproject.toml, lock, Poetry &amp; uv</span>
+            <span><strong>5.</strong> Conda, Containers, VMs &amp; Décision</span>
           </div>
         </div>
 
@@ -119,7 +121,7 @@ export const PrintableCheatsheet: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#E95420]" />
               1. Rappels Shell CLI, Arborescence, Variables d'environnement &amp; PATH
             </h2>
-            <span className="text-[10px] font-mono text-zinc-300">Bash / Zsh • Racine /</span>
+            <span className="text-[10px] font-mono text-zinc-300">Slides 6 à 18 • Bash / Zsh</span>
           </div>
 
           <div className="p-3 grid grid-cols-12 gap-3 text-[11px]">
@@ -249,7 +251,7 @@ export const PrintableCheatsheet: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#E95420]" />
               2. Packages Python, PyPI, pip, Graphe des dépendances &amp; SemVer
             </h2>
-            <span className="text-[10px] font-mono text-zinc-300">PyPI • sdist vs wheel • Tri topologique</span>
+            <span className="text-[10px] font-mono text-zinc-300">Slides 18 à 29 • PyPI &amp; SemVer</span>
           </div>
 
           <div className="p-3 grid grid-cols-12 gap-3 text-[11px]">
@@ -351,7 +353,7 @@ export const PrintableCheatsheet: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#E95420]" />
               3. Environnements Virtuels Classiques : venv, requirements.txt &amp; virtualenv
             </h2>
-            <span className="text-[10px] font-mono text-zinc-300">Analogie : Une Lunch Box isolée</span>
+            <span className="text-[10px] font-mono text-zinc-300">Slides 30 à 39 • Analogie : « La Lunch Box »</span>
           </div>
 
           <div className="p-3 grid grid-cols-12 gap-3 text-[11px]">
@@ -440,7 +442,7 @@ export const PrintableCheatsheet: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#E95420]" />
               4. Gestion Moderne : pyproject.toml, lock, Poetry (= Cheffe de cuisine) &amp; uv
             </h2>
-            <span className="text-[10px] font-mono text-zinc-300">TOML • Souhait vs Réalité</span>
+            <span className="text-[10px] font-mono text-zinc-300">Slides 40 à 51 • TOML • Souhait vs Réalité</span>
           </div>
 
           <div className="p-3 space-y-2.5 text-[11px]">
@@ -543,7 +545,7 @@ export const PrintableCheatsheet: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#E95420]" />
               5. Au-delà de Python : Conda (= Cheffe à domicile), Containers &amp; Machines Virtuelles
             </h2>
-            <span className="text-[10px] font-mono text-zinc-300">Dépendances système C/C++ • Binaires anaconda.org</span>
+            <span className="text-[10px] font-mono text-zinc-300">Slides 52 à 58 • Binaires système &amp; Isolation</span>
           </div>
 
           <div className="p-3 grid grid-cols-12 gap-3 text-[11px]">

@@ -333,9 +333,12 @@ export function App() {
                     {/* Module Header */}
                     <div className="bg-[#141417] text-white px-5 py-3.5 border-b border-zinc-800 flex flex-wrap items-center justify-between gap-2">
                       <div>
-                        <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-[#E95420] text-white rounded">
-                          Chapitre {mod.number}
-                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-[#E95420] text-white rounded">
+                            Chapitre {mod.number}
+                          </span>
+                          <span className="text-xs font-mono text-zinc-400">{mod.slideRange}</span>
+                        </div>
                         <h2 className="text-base sm:text-lg font-extrabold mt-1">{mod.title}</h2>
                         <p className="text-xs text-zinc-300 mt-0.5">{mod.subtitle}</p>
                       </div>

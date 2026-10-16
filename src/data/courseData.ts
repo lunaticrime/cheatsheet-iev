@@ -73,7 +73,7 @@ export const COURSE_MODULES: CourseModule[] = [
     shortTitle: "Shell, Arborescence & PATH",
     title: "Module 1 — Rappels sur les Shells CLI, Système de fichiers & PATH",
     subtitle: "Comprendre comment le système d'exploitation interprète vos commandes, résout les chemins et trouve les exécutables.",
-    slideRange: "Slides 6 à 18 (Pages 9–26)",
+    slideRange: "Slides 6 à 18",
     badgeColor: "orange",
     concepts: [
       {
@@ -242,7 +242,7 @@ export const COURSE_MODULES: CourseModule[] = [
     shortTitle: "Packages, pip, SemVer & Conflits",
     title: "Module 2 — Packages Python, PyPI, `pip`, SemVer & Enfer des dépendances",
     subtitle: "Installer des bibliothèques, comprendre le graphe des dépendances (tri topologique), le versionnage sémantique et les conflits.",
-    slideRange: "Slides 18 à 29 (Pages 27–47)",
+    slideRange: "Slides 18 à 29",
     badgeColor: "amber",
     concepts: [
       {
@@ -370,7 +370,7 @@ export const COURSE_MODULES: CourseModule[] = [
     shortTitle: "venv, requirements.txt & virtualenv",
     title: "Module 3 — Environnements Virtuels Classiques (`venv` & `virtualenv`)",
     subtitle: "Isoler ses projets Python dans des « lunch boxes » autonomes et partager ses dépendances avec `requirements.txt`.",
-    slideRange: "Slides 30 à 39 (Pages 48–78)",
+    slideRange: "Slides 30 à 39",
     badgeColor: "emerald",
     concepts: [
       {
@@ -503,7 +503,7 @@ export const COURSE_MODULES: CourseModule[] = [
     shortTitle: "pyproject.toml, lock & Poetry",
     title: "Module 4 — Gestion Moderne : `pyproject.toml`, `poetry.lock`, `Poetry` & `uv`",
     subtitle: "Dépasser les limites de `requirements.txt` grâce au standard TOML, au verrouillage déterministe et aux gestionnaires de projets tout-en-un.",
-    slideRange: "Slides 40 à 51 (Pages 79–111)",
+    slideRange: "Slides 40 à 51",
     badgeColor: "purple",
     concepts: [
       {
@@ -642,7 +642,7 @@ export const COURSE_MODULES: CourseModule[] = [
     shortTitle: "Conda, Containers & Isolation",
     title: "Module 5 — Au-delà de Python : `Conda`, Containers Docker & Machines Virtuelles",
     subtitle: "Gérer les bibliothèques système non-Python (C/C++/CUDA/GDAL) et situer les environnements virtuels dans la pyramide de l'isolation.",
-    slideRange: "Slides 52 à 59 (Pages 112–126)",
+    slideRange: "Slides 52 à 59",
     badgeColor: "cyan",
     concepts: [
       {

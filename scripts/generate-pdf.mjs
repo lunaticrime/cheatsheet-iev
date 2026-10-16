@@ -351,8 +351,11 @@ async function generate() {
         </div>
         <div class="toc-bar">
           <span style="white-space:nowrap;"><strong>Sommaire :</strong></span>
-          <span><strong>Page 1 :</strong> Ch.1 Shell CLI, Arborescence, PATH &amp; Inception • Ch.2 Packages, PyPI, pip, Graphe DAG, SemVer &amp; Conflits</span>
-          <span><strong>Page 2 :</strong> Ch.3 venv, requirements.txt, virtualenv • Ch.4 pyproject.toml, lock, Poetry &amp; uv • Ch.5 Conda, Containers, VMs &amp; Décision</span>
+          <span><strong>Ch.1</strong> Shell CLI, Arborescence, PATH &amp; Inception</span>
+          <span><strong>Ch.2</strong> Packages, PyPI, pip, Graphe DAG &amp; SemVer</span>
+          <span><strong>Ch.3</strong> venv, requirements.txt &amp; virtualenv</span>
+          <span><strong>Ch.4</strong> pyproject.toml, lock, Poetry &amp; uv</span>
+          <span><strong>Ch.5</strong> Conda, Containers &amp; VMs</span>
         </div>
       </div>
 
@@ -360,7 +363,7 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 1 — Rappels sur les Shells CLI, Système de fichiers, Variables &amp; PATH</div>
-          <span class="meta">Bash / Zsh • Racine /</span>
+          <span class="meta">Slides 6 à 18 • Bash / Zsh • Racine /</span>
         </div>
         <div class="section-body grid-2">
           <div>
@@ -481,7 +484,7 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 2 — Packages Python, PyPI, pip, Graphe des dépendances, SemVer &amp; Conflits</div>
-          <span class="meta">PyPI • sdist vs wheel • Tri topologique</span>
+          <span class="meta">Slides 18 à 29 • PyPI • sdist vs wheel • Tri topologique</span>
         </div>
         <div class="section-body grid-2">
           <div>
@@ -567,7 +570,7 @@ async function generate() {
 
     <div class="page-footer">
       <span>Initiation aux Environnements Virtuels Python (IEV - Polytech Lille)</span>
-      <span>Ratio Informations / Arbres Trucidés Maximisé • Page 1 / 2</span>
+      <span>https://lunaticrime.github.io/cheatsheet-iev/</span>
     </div>
   </div>
 
@@ -578,7 +581,7 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 3 — Environnements Virtuels Classiques : venv, requirements.txt &amp; virtualenv</div>
-          <span class="meta">Isolation par projet • Analogie : « La Lunch Box »</span>
+          <span class="meta">Slides 30 à 39 • Analogie : « La Lunch Box »</span>
         </div>
         <div class="section-body grid-2">
           <div>
@@ -649,7 +652,7 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 4 — Gestion Moderne : pyproject.toml, lock, Poetry (= Cheffe de cuisine) &amp; uv</div>
-          <span class="meta">TOML • Résolution SAT • uv (Rust)</span>
+          <span class="meta">Slides 40 à 51 • TOML • Résolution SAT • uv (Rust)</span>
         </div>
         <div class="section-body" style="display:flex; flex-direction:column; gap:4px;">
           <div class="grid-3">
@@ -744,7 +747,7 @@ async function generate() {
       <div class="section-card">
         <div class="section-header">
           <div><span class="dot"></span>Chapitre 5 — Au-delà de Python : Conda (= Cheffe à domicile), Containers, VMs &amp; Isolation</div>
-          <span class="meta">Binaires système • Docker vs VM • Pyramide</span>
+          <span class="meta">Slides 52 à 58 • Binaires système • Docker vs VM • Pyramide</span>
         </div>
         <div class="section-body grid-2">
           <div>
@@ -837,7 +840,7 @@ async function generate() {
 
     <div class="page-footer">
       <span>Initiation aux Environnements Virtuels Python (IEV - Polytech Lille)</span>
-      <span>Ratio Informations / Arbres Trucidés Maximisé • Page 2 / 2</span>
+      <span>https://lunaticrime.github.io/cheatsheet-iev/</span>
     </div>
   </div>
 
