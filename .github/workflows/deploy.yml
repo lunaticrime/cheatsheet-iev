@@ -1,0 +1,54 @@
+name: Deploy Cheatsheet & Generate PDF to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate updated cheatsheet_print.html with final QR code
+        env:
+          CHEATSHEET_URL: "https://lunaticrime.github.io/cheatsheet-iev/"
+        run: node scripts/generate-pdf.mjs
+
+      - name: Render 2-page A4 PDF via headless Chromium
+        run: |
+          google-chrome --headless --disable-gpu --no-pdf-header-footer \
+            --print-to-pdf="public/cheatsheet_environnements_virtuels.pdf" \
+            "file://${GITHUB_WORKSPACE}/cheatsheet_print.html"
+          cp public/cheatsheet_environnements_virtuels.pdf Cheatsheet_Environnements_Virtuels_Python_IEV.pdf
+
+      - name: Build production website
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
