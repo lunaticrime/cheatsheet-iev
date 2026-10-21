@@ -69,14 +69,14 @@ export const PrintableCheatsheet: React.FC = () => {
                   CHEATSHEET DE RÉVISION
                 </span>
                 <span className="text-xs font-mono text-zinc-300">
-                  {COURSE_METADATA.code} • {COURSE_METADATA.institution}
+                  {COURSE_METADATA.code} • {COURSE_METADATA.institution} • Par {COURSE_METADATA.students}
                 </span>
               </div>
               <h1 className="text-lg font-extrabold tracking-tight mt-1">
                 Plongée dans les environnements virtuels Python
               </h1>
               <p className="text-[11px] text-zinc-300">
-                Cours : {COURSE_METADATA.authors} • Shell CLI, PATH, pip, SemVer, venv, virtualenv, pyproject.toml, Poetry, uv, Conda, Docker &amp; VMs.
+                Par <strong>{COURSE_METADATA.students}</strong> • Cours : {COURSE_METADATA.authors} (Polytech Lille)
               </p>
             </div>
 

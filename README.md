@@ -1,6 +1,7 @@
 # Cheatsheet Interactive & Simulateur de Terminal — Initiation aux Environnements Virtuels Python (IEV)
 
-**Cours :** *Plongée dans les environnements virtuels Python* (IEV — ISIA 2026–2027, Polytech Lille)  
+**Auteurs / Étudiants :** CHOUKRAD Oualid & MAZIANE Malak  
+**Cours :** *Plongée dans les environnements virtuels Python* (IEV — ISIA, Polytech Lille)  
 **Enseignants :** Juliette Achddou & Bastien Cazaux  
 
 Ce projet propose deux livrables complémentaires partageant la même identité visuelle (inspirée de Linux : *Charcoal `#141417`, Orange `#E95420`, Warm White `#FAF8F5`*), la même rigueur technique et une couverture à 100 % du support de cours (59 slides et 13 activités pratiques *« À vous de jouer »*) :

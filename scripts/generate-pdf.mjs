@@ -335,10 +335,10 @@ async function generate() {
           <div>
             <div>
               <span class="badge-orange">CHEATSHEET DE RÉVISION</span>
-              <span class="mono" style="font-size:6.6pt; color:#A1A1AA; margin-left:6px;">IEV - ISIA • Polytech Lille</span>
+              <span class="mono" style="font-size:6.6pt; color:#A1A1AA; margin-left:6px;">IEV - ISIA • Polytech Lille • Par CHOUKRAD Oualid &amp; MAZIANE Malak</span>
             </div>
             <div class="banner-title">Plongée dans les environnements virtuels Python</div>
-            <div class="banner-sub">Cours : Juliette Achddou &amp; Bastien Cazaux • Shell CLI, PATH, pip, SemVer, venv, virtualenv, pyproject.toml, Poetry, uv, Conda, Docker &amp; VMs</div>
+            <div class="banner-sub">Par CHOUKRAD Oualid &amp; MAZIANE Malak • Cours : Juliette Achddou &amp; Bastien Cazaux (Polytech Lille)</div>
           </div>
           <div class="qr-box">
             <img src="${qrDataUri}" alt="QR Code" />
@@ -569,7 +569,7 @@ async function generate() {
     </div>
 
     <div class="page-footer">
-      <span>Initiation aux Environnements Virtuels Python (IEV - Polytech Lille)</span>
+      <span>IEV - Polytech Lille • Réalisé par CHOUKRAD Oualid &amp; MAZIANE Malak</span>
       <span>https://lunaticrime.github.io/cheatsheet-iev/</span>
     </div>
   </div>
@@ -839,7 +839,7 @@ async function generate() {
     </div>
 
     <div class="page-footer">
-      <span>Initiation aux Environnements Virtuels Python (IEV - Polytech Lille)</span>
+      <span>IEV - Polytech Lille • Réalisé par CHOUKRAD Oualid &amp; MAZIANE Malak</span>
       <span>https://lunaticrime.github.io/cheatsheet-iev/</span>
     </div>
   </div>

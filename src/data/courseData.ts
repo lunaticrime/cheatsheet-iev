@@ -62,6 +62,7 @@ export const COURSE_METADATA = {
   code: "IEV — ISIA",
   institution: "Polytech Lille",
   authors: "Juliette Achddou & Bastien Cazaux",
+  students: "CHOUKRAD Oualid & MAZIANE Malak",
   purpose: "Cheatsheet interactive de révision & simulateur de terminal couvrant les environnements virtuels Python (Shell CLI, PATH, pip, SemVer, venv, virtualenv, pyproject.toml, Poetry, Conda, Containers & VMs).",
   defaultWebsiteUrl: "https://lunaticrime.github.io/cheatsheet-iev/"
 };

@@ -140,9 +140,12 @@ export function App() {
                 <span className="hidden lg:inline-block text-[10px] font-mono bg-zinc-800 text-[#F97316] px-2 py-0.5 rounded border border-zinc-700">
                   {COURSE_METADATA.institution}
                 </span>
+                <span className="hidden xl:inline-block text-[10px] font-mono text-zinc-300">
+                  {COURSE_METADATA.students}
+                </span>
               </div>
               <p className="text-[11px] text-zinc-400 hidden md:block truncate">
-                {COURSE_METADATA.title}
+                {COURSE_METADATA.title} • Par {COURSE_METADATA.students}
               </p>
             </div>
           </div>
@@ -269,12 +272,20 @@ export function App() {
         <main className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 py-5">
           {/* Clean, Concise Intro Bar */}
           <div className="bg-gradient-to-r from-[#141417] via-[#1C1C21] to-[#27272A] text-white rounded-2xl p-4 sm:p-5 mb-6 border border-[#2C2C35] shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-            <div className="space-y-1 max-w-3xl">
+            <div className="space-y-1.5 max-w-3xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider bg-[#E95420] text-white rounded">
+                  IEV ISIA • Polytech Lille
+                </span>
+                <span className="text-xs font-mono text-zinc-300">
+                  Par <strong>{COURSE_METADATA.students}</strong>
+                </span>
+              </div>
               <h1 className="text-lg sm:text-xl font-extrabold tracking-tight">
                 Initiation aux Environnements Virtuels Python — Cheatsheet &amp; Terminal Interactif
               </h1>
               <p className="text-xs text-zinc-300 leading-relaxed">
-                Retrouvez l'essentiel du cours (Shell CLI, <code className="font-mono text-amber-300">PATH</code>, <code className="font-mono text-amber-300">pip</code>, SemVer, <code className="font-mono text-emerald-300">venv</code>, <code className="font-mono text-purple-300">Poetry</code>, <code className="font-mono text-sky-300">Conda</code>, Docker &amp; VMs) et cliquez sur <strong>« Tester dans le terminal »</strong> sur n'importe quelle commande pour pratiquer en direct.
+                Cours de {COURSE_METADATA.authors} • Retrouvez l'essentiel (Shell CLI, <code className="font-mono text-amber-300">PATH</code>, <code className="font-mono text-amber-300">pip</code>, SemVer, <code className="font-mono text-emerald-300">venv</code>, <code className="font-mono text-purple-300">Poetry</code>, <code className="font-mono text-sky-300">Conda</code>, Docker &amp; VMs) et cliquez sur <strong>« Tester dans le terminal »</strong> sur n'importe quelle commande pour pratiquer en direct.
               </p>
             </div>
 
@@ -772,7 +783,7 @@ export function App() {
         <div className="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-4">
           <div>
             <span className="font-bold text-white">Plongée dans les environnements virtuels Python</span>{' '}
-            • Polytech Lille
+            • Polytech Lille — Réalisé par <strong className="text-zinc-200">{COURSE_METADATA.students}</strong>
           </div>
           <div className="flex items-center gap-4">
             <button
